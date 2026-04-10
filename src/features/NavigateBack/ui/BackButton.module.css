@@ -1,0 +1,48 @@
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 2rem;
+}
+
+.backButton:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  transform: translateX(-2px);
+}
+
+.backButton:active {
+  transform: translateX(0);
+}
+
+/* Темная тема (опционально) */
+@media (prefers-color-scheme: dark) {
+  .backButton {
+    background: #1f2937;
+    border-color: #374151;
+    color: #e5e7eb;
+  }
+  
+  .backButton:hover {
+    background: #374151;
+    border-color: #4b5563;
+  }
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .backButton {
+    padding: 0.375rem 0.875rem;
+    font-size: 0.8125rem;
+    margin-bottom: 1.5rem;
+  }
+}
