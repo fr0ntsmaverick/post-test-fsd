@@ -1,14 +1,11 @@
 import { PostList } from '@/widgets/PostList';
 import { Pagination } from '@/widgets/PaginationWidget';
 import { usePostsPage } from '../model/usePostsPage';
-import { usePostsScrollRestoration } from '../model/usePostsScrollRestoration';
 import styles from './PostsPage.module.css';
 
 export const PostsPage = () => {
   const { posts, isLoading, currentPage, totalPages, handlePageChange, error } = usePostsPage();
   
-  // Вся логика скролла здесь, на уровне страницы
-  usePostsScrollRestoration(isLoading);
 
   if (error) {
     return (
